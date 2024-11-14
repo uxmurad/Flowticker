@@ -1,0 +1,126 @@
+.fs {
+    &-12 {
+        font-size: 12px !important;
+    }
+    &-14 {
+        font-size: 14px !important;
+    }
+    &-16 {
+        font-size: 16px !important;
+    }
+    &-18 {
+        font-size: 18px !important;
+    }
+}
+
+.text {
+    &-heading {
+        color: $heading !important;
+    }
+    &-body {
+        color: $text !important;
+    }
+    &-underline {
+        text-decoration: underline !important;
+    }
+}
+
+.cursor {
+    &-pointer {
+        cursor: pointer !important;
+    }
+}
+
+.bg {
+    &-opacity {
+        &-20 {
+            --bs-bg-opacity: .20;
+        }
+    }
+}
+
+.grid-count {
+    &-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+// 
+.stdropdown {
+    &-container {
+        background-color: $bgGray !important;
+        border: 1px solid $border !important;
+    }
+    &-input {
+        padding: 1px !important;
+        padding-right: 10px !important;
+        & input {
+            border: none !important;
+            padding-left: 16px !important;
+            background-color: transparent !important;
+        }
+    }
+    &-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-family: $font-1;
+        color: $text;
+        font-size: 14px;
+        &:hover {
+            background-color: rgba($color: $primary, $alpha: .4) !important;
+        }
+        &.selected {
+            background-color: rgba($color: $primary, $alpha: .4) !important;
+            color: $heading !important;
+        }
+    }
+}
+
+.mr-6 {
+    @include xxxl {
+        margin-right: 6rem !important;
+    }
+    margin-right: 1rem;
+}
+
+.pagination {
+    gap: 5px;
+    .page {
+        &-item {
+            &.active {
+                & .page-link {
+                    color: $white !important;
+                    border-color: $primary !important;
+                }
+            }
+        }
+        &-link {
+            --width: 40px;
+            box-shadow: 0 0 0 !important;
+            width: var(--width);
+            height: var(--width);
+            flex: 0 0 auto;
+            padding: 0;
+            @include flex;
+            justify-content: center;
+            border-color: $border;
+            border-radius: 8px !important;
+            font-size: 14px;
+            color: $text;
+            @include sm {
+                --width: 32px;
+            }
+            & span {
+                line-height: 1;
+            }
+            &:hover,
+            &:focus,
+            .active & {
+                background-color: $primary;
+                color: $white;
+                border-color: $primary;
+            }
+        }
+    }
+}

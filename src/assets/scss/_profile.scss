@@ -1,0 +1,311 @@
+.profile {
+    &-details {
+        border-radius: 16px;
+        border: 1px solid $border;
+        background: $white;
+        padding: 20px;
+        .image {
+            max-width: 100%;
+            border-radius: 12px;
+            margin-bottom: 114px;
+            @include xl {
+                margin-bottom: 84px;
+            }
+            @include lg {
+                margin-bottom: 65px;
+            }
+            @include mmd {
+                margin-bottom: 60px;
+            }
+            img {
+                border-radius: 12px;
+                height: 100%;
+                max-height: 230px;
+                object-fit: cover;
+            }
+        }
+        .profile-area {
+            bottom: -64%;
+            @include xxl {
+                bottom: -88%;
+            }
+            @include xl {
+                bottom: -88%;
+            }
+            @include lg {
+                bottom: -105%;
+            }
+            @include mmd {
+                bottom: -72%;
+            }
+        }
+        .upload-banner {
+            --width: 40px;
+            width: var(--width);
+            height: var(--width);
+            right: 16px;
+            top: 16px;
+            padding: 12px;
+            background-color: $white;
+            border-radius: 50%;
+            cursor: pointer;
+            @include sm {
+                bottom: -30px;
+                padding: 10px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .profile-img {
+            --width: 147px;
+            width: var(--width);
+            height: var(--width);
+            border-radius: 100%;
+            overflow: hidden;
+            @include xl {
+                --width: 124px;
+            }
+            @include lg {
+                --width: 100px;
+            }
+            @include mmd {
+                --width: 105px;
+            }
+            @include sm {
+                --width: 86px;
+            }
+            // @include mmd{
+            //     --width: 100px;
+            // }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .profile-edit {
+            --width: 40px;
+            width: var(--width);
+            height: var(--width);
+            padding: 12px;
+            border-radius: 50%;
+            bottom: -35px;
+            cursor: pointer;
+            @include lg {
+                --width: 34px;
+                padding: 9px;
+            }
+            @include sm {
+                --width: 30px;
+                padding: 8px;
+                bottom: -30px;
+            }
+        }
+        .profile-history {
+            .form-box {
+                .form-label {
+                    font-size: 16px !important;
+                }
+            }
+            .line {
+                width: 100%;
+                height: 1px;
+                background-color: $border;
+            }
+            .invoice {
+                color: $heading2;
+            }
+        }
+    }
+    &-social {
+        border-radius: 16px;
+        border: 1px solid $border;
+        background: $white;
+        padding: 20px;
+        .title {
+            font-size: 18px;
+            color: $heading2;
+        }
+        .social {
+            .form-box {
+                .form-label {
+                    font-size: 16px !important;
+                }
+            }
+        }
+        .btn {
+            color: $heading2 !important;
+            padding: 10px 85px;
+            font-size: 16px !important;
+            @include sm {
+                width: 100%;
+            }
+        }
+    }
+    .nav-tabs {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid $border;
+    }
+    .nav-link {
+        @include sm {
+            padding: 5px 6px;
+        }
+    }
+    .nav-tabs .nav-link {
+        color: #8E8F95 !important;
+        font-size: 16px;
+        font-weight: 500;
+        @include sm {
+            font-size: 14px;
+        }
+        &:not(.active) {
+            &:hover {
+                border-color: transparent !important;
+                color: $primary !important;
+            }
+        }
+    }
+    .nav-tabs .nav-link.active,
+    .nav-tabs .nav-item.show .nav-link {
+        color: $heading2 !important;
+        font-size: 16px;
+        font-weight: 500;
+        border-color: transparent;
+        border-bottom: 1px solid #4DD5B8;
+        @include sm {
+            font-size: 14px;
+        }
+    }
+    .nav-tabs .nav-link:hover,
+    .nav-tabs .nav-link:focus {
+        isolation: none;
+    }
+}
+
+.broken-area {
+    .broken-heading {
+        .input-item {
+            max-width: 255px;
+            flex: 0 0 auto;
+            width: 100%;
+            @include sm {
+                max-width: 170px;
+                & input {
+                    height: 40px;
+                }
+            }
+        }
+        .form-control {
+            padding-left: 40px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            @include sm {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+        .filter {
+            border-radius: 8px;
+            --width: 30px;
+            width: var(--width);
+            height: var(--width);
+            flex: 0 0 auto;
+        }
+    }
+    .tableheader {
+        background-color: #F8F8F8;
+    }
+    p.table-label {
+        color: #727277;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 14px 8px;
+    }
+    .action {
+        padding-top: 12px;
+        .edit,
+        .delete {
+            --width: 30px;
+            height: var(--width);
+            width: var(--width);
+            border-radius: 50%;
+            border: 2px solid $border;
+            background-color: transparent !important;
+            transition: 0.3s ease-in-out;
+            &:hover {
+                background-color: $primary !important;
+                border-color: $primary !important;
+                svg {
+                    color: $heading;
+                }
+            }
+            cursor: pointer;
+            svg {
+                color: #727277;
+            }
+        }
+    }
+    .value {
+        font-size: 16px;
+        font-weight: 400;
+        color: $heading2;
+        padding: 14px 8px;
+    }
+    .table> :not(caption)>*>* {
+        background-color: transparent;
+        padding: 0 !important;
+    }
+}
+
+.broken-modal {
+    .form-box {
+        .form-label {
+            font-size: 16px;
+            font-weight: 500;
+            color: $heading2;
+        }
+    }
+    .link-item {
+        p {
+            color: $heading2;
+        }
+        a {
+            color: #FF823C;
+            text-decoration-line: underline !important;
+        }
+    }
+    .line {
+        min-height: 1px;
+        background-color: $border;
+    }
+    .btns {
+        color: $heading2;
+    }
+    .broken-contact {
+        color: $heading2;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .css-1p3m7a8-multiValue {
+        border-radius: 39px;
+        padding: 2px 8px;
+        background-color: $white !important;
+    }
+    .css-1u9des2-indicatorSeparator {
+        background-color: transparent;
+    }
+    .css-13cymwt-control {
+        background-color: #F8F8F8 !important;
+        border-color: $border !important;
+    }
+    .form-select {
+        background-color: #F8F8F8;
+        font-size: 14px;
+        padding: 11px 14px;
+    }
+}

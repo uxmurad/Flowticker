@@ -1,0 +1,58 @@
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 132px);
+    &-wrap {
+        width: 566px;
+        border-radius: 12px;
+        border: 1px solid $border;
+        background: $white;
+        padding: 16px 32px;
+        @include md {
+            padding: 16px 20px;
+        }
+        @include sm {
+            padding: 16px;
+        }
+        & .form {
+            &-box {
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                    @include mmd {
+                        margin-bottom: 12px;
+                    }
+                }
+                & textarea {
+                    min-height: 157px;
+                }
+            }
+            &-label {
+                color: $heading2;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 150%;
+            }
+        }
+        & h3 {
+            color: $heading2;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 150%;
+            margin-bottom: 16px;
+            @include md {
+                font-size: 28px;
+                margin-bottom: 12px;
+            }
+            @include sm {
+                font-size: 26px;
+                margin-bottom: 12px;
+            }
+        }
+        & .btn {
+            padding: 9px 64px;
+            font-size: 16px;
+        }
+    }
+}

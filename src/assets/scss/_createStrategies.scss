@@ -1,0 +1,460 @@
+.createStrategies {
+  &-header {
+    background-color: $heading2;
+    padding: 12px 20px;
+    border-radius: 12px 12px 0 0;
+    @include mmd {
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center !important;
+    }
+    & .header {
+      &-left {
+        & .backBtn {
+          --size: 40px;
+          width: var(--size);
+          height: var(--size);
+          border-radius: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $card-bg;
+          margin-right: 12px;
+          font-size: 19px;
+          @include lg {
+            --size: 38px;
+            margin-right: 8px;
+          }
+          @include mmd {
+            --size: 38px;
+            margin-right: 8px;
+          }
+        }
+        & p {
+          color: $white;
+          margin-right: 16px;
+          @include lg {
+            margin-right: 8px;
+          }
+          @include mmd {
+            margin-right: 8px;
+          }
+        }
+        & .edit {
+          --size: 30px;
+          width: var(--size);
+          height: var(--size);
+          border-radius: 100%;
+          flex: 0 0 auto;
+          padding: 0;
+        }
+      }
+      &-right {
+        @include mmd {
+          flex-wrap: wrap;
+        }
+        & button {
+          border: 1px solid #eaeaea33;
+        }
+        & .arrow-btn {
+          background: $card-bg;
+          border-radius: 8px;
+          & button {
+            padding: 0;
+            --size: 36px;
+            width: var(--size);
+            height: var(--size);
+            border-radius: 8px;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $white;
+            &.active {
+              background-color: $secondary;
+            }
+          }
+        }
+        & .play {
+          --size: 44px;
+          width: var(--size);
+          height: var(--size);
+          color: $primary;
+          border-radius: 100%;
+          padding: 0;
+          font-size: 25px;
+          padding-left: 2px;
+          @include lg {
+            font-size: 21px;
+            --size: 35px;
+            padding-left: 0;
+            & svg {
+              width: 16px;
+            }
+          }
+          @include mmd {
+            font-size: 21px;
+            --size: 35px;
+            padding-left: 0;
+            & svg {
+              width: 16px;
+            }
+          }
+        }
+        &-btn {
+          & .padding {
+            padding: 10px 24px;
+            @include lg {
+              padding: 8px 24px;
+            }
+            @include mmd {
+              padding: 8px 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-wrap {
+    --width: 276px;
+    @include lg {
+      overflow: auto;
+    }
+    @include mmd {
+      overflow: auto;
+    }
+    & .action {
+      color: $heading;
+      font-weight: 500;
+      padding: 16px 0;
+      &-btn {
+        --size: 22px;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 100%;
+        background-color: $bgGray;
+        font-size: 10px;
+      }
+    }
+  }
+  &-leftBar {
+    width: var(--width);
+    padding: 0 16px;
+    flex: 0 0 auto;
+    & .single {
+      border-radius: 6px;
+      border: 1px solid $border;
+      padding: 12px;
+      background: $bgGray;
+      cursor: pointer;
+      font-size: 14px;
+      & .it {
+        border-bottom: 1px solid $border;
+      }
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+    & .action {
+      &-panel {
+        & .dashboard-topBar-search {
+          margin: 8px 0;
+        }
+      }
+      &-item {
+        border-radius: 8px;
+        background: $white;
+        padding: 8px;
+        gap: 8px;
+        @include transition;
+        border: 1px solid transparent;
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+        &:hover {
+          border: 1px solid $secondary;
+        }
+        & p {
+          font-size: 12px;
+          & span {
+            color: $heading;
+            font-weight: 500;
+          }
+        }
+        & .plus {
+          --size: 22px;
+          width: var(--size);
+          height: var(--size);
+          border-radius: 100%;
+          flex: 0 0 auto;
+          color: $heading;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  &-content {
+    border: 1px dashed $primary;
+    width: 100%;
+    height: revert-layer;
+    padding: 0 16px;
+    cursor: pointer;
+    display: flex;
+    background: $bgGray;
+    & .drop {
+      margin-top: 24px;
+      position: relative;
+      z-index: 1;
+      max-width: 263px;
+      & img {
+        margin-top: -2px;
+      }
+      & .btn {
+        --bs-btn-padding-y: 8px;
+        --bs-btn-padding-x: 16px;
+        cursor: pointer;
+        &:hover .close {
+          @include show;
+        }
+        & .close {
+          --width: 34px;
+          border-radius: 4px;
+          margin-bottom: -10px;
+          margin-right: -10px;
+          cursor: pointer;
+          @include hidden;
+          @include transition;
+        }
+      }
+      & .btn1 {
+        &:hover {
+          background-color: #ffc833 !important;
+          border-color: #ffc833 !important;
+          color: $heading !important;
+        }
+      }
+      &-btn {
+        background-color: #eef6f4;
+      }
+    }
+    & .content {
+      &-header {
+        @include xxxl {
+          width: 931px;
+        }
+        padding: 8px 8px 8px 16px;
+        border-radius: 12px;
+        background: $white;
+        box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+        margin-top: 20px;
+        width: 100%;
+        @include xxl {
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+        @include xl {
+          gap: 10px;
+          flex-wrap: wrap;
+          padding: 8px 14px;
+        }
+        @include lg {
+          flex-wrap: wrap;
+          gap: 10px;
+          padding: 8px 14px;
+        }
+        @include mmd {
+          flex-wrap: wrap;
+          gap: 10px;
+          padding: 8px 14px;
+        }
+        &-left {
+          @include xxl {
+            flex-wrap: wrap;
+          }
+          @include xl {
+            flex-wrap: wrap;
+          }
+          @include lg {
+            flex-wrap: wrap;
+          }
+          @include mmd {
+            flex-wrap: wrap;
+          }
+          & .single,
+          .commonInput {
+            border-radius: 8px;
+            border: 1px solid $border;
+            padding: 8px 12px 8px 16px;
+            width: 126px;
+            height: 34px;
+            font-size: 12px;
+            color: $heading;
+            font-weight: 500;
+            @include xxl {
+              width: 120px;
+            }
+            @include xl {
+              width: calc(50% - 5px);
+            }
+            @include lg {
+              width: calc(50% - 5px);
+            }
+            @include mmd {
+              width: calc(50% - 5px);
+            }
+          }
+          & .line {
+            width: 1px;
+            height: 100%;
+            background-color: $border;
+            max-height: 34px;
+            @include xl {
+              display: none;
+            }
+            @include lg {
+              display: none;
+            }
+            @include mmd {
+              display: none;
+            }
+          }
+          & .single {
+            @include transition;
+            &:hover {
+              border-color: $primary;
+              & ul {
+                opacity: 1;
+              }
+            }
+            & ul {
+              display: none !important;
+              opacity: 0;
+              @include transition;
+              width: 212px;
+              height: auto;
+              border-radius: 8px 0px 8px 8px;
+              border: 1px solid $primary;
+              background: $white;
+              box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+              padding: 16px 0;
+              top: 30px;
+              right: 0;
+              z-index: 2;
+              & li {
+                padding: 8px 16px;
+                &:not(:last-child) {
+                  border-bottom: 1px solid $border;
+                }
+                &:first-child {
+                  padding-top: 0;
+                }
+                &:last-child {
+                  padding-bottom: 0;
+                }
+                color: #727277;
+                & span {
+                  font-size: 14px;
+                  font-weight: 500;
+                }
+                & p {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+        &-btn {
+          @include xl {
+            width: 100%;
+          }
+          @include lg {
+            width: 100%;
+          }
+          @include mmd {
+            width: 100%;
+          }
+          & button {
+            padding: 10px 35px;
+            @include xl {
+              width: calc(50% - 5px);
+            }
+            @include lg {
+              width: calc(50% - 5px);
+            }
+            @include mmd {
+              width: calc(50% - 5px);
+            }
+            &:first-child {
+              border-color: $border !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  & .commonInput {
+    background-color: $bgGray;
+    border-radius: 8px;
+    border: 1px solid $border;
+    padding: 8px 12px 8px 16px;
+    width: 100%;
+    height: 34px;
+    font-size: 12px;
+    color: $heading;
+    font-weight: 500;
+  }
+  & .rightBar {
+    width: 274px;
+    flex: 0 0 auto;
+    & .single {
+      height: 34px;
+      padding: 8px 12px 8px 16px;
+      background-color: $white;
+      & .it {
+        font-size: 10px;
+        font-weight: 500;
+        color: #727277;
+        & span {
+          font-size: 12px;
+          color: $heading;
+        }
+      }
+    }
+    & .btn {
+      padding: 10px 38.5px;
+    }
+  }
+}
+
+.action-panel {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.action-panel > div {
+  margin-bottom: 0px !important;
+}
+.dashboard-topBar-search input {
+  padding-left: 10px !important;
+  box-shadow: none !important;
+}
+.not-active-dropdown-strategies .it {
+  border-bottom: none !important;
+  line-height: 20px;
+}
+.createStrategies-content .content-header-left .single ul.show-dropdown {
+  display: block !important;
+  opacity: 1 !important;
+}
+.not-active-dropdown-strategies {
+  overflow: hidden;
+  height: 45px;
+  background: transparent !important;
+}
+.single .it svg {
+  transform: rotate(180deg) !important;
+}
+.not-active-dropdown-strategies .it svg {
+  transform: rotate(0deg) !important;
+}

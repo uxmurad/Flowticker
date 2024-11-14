@@ -1,0 +1,167 @@
+.profile {
+    --gap24: 24px;
+    --gap16: 16px;
+    $heading: #151B22;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap24);
+    @include lg {
+        --gap24: 16px;
+    }
+    @include mmd {
+        --gap24: 20px;
+        --gap16: 16px;
+    }
+    & .btn {
+        --bs-btn-border-color: #EAEAEA;
+    }
+    &-banner {
+        & img {
+            max-width: none;
+            width: 100%;
+            border-radius: 12px;
+            @include mmd {
+                height: 116px;
+            }
+        }
+    }
+    &-graph {
+        gap: var(--gap24);
+        @include mmd {
+            flex-direction: column;
+        }
+        &-list {
+            width: 31.93%;
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap16);
+            @include mmd {
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            & .single {
+                gap: 8px;
+                padding: 16px;
+                border-radius: 12px;
+                background-color: $white;
+                @include lg {
+                    padding: 10px;
+                }
+                @include mmd {
+                    padding: 10px;
+                    width: calc(50% - 8px);
+                }
+                & .icon {
+                    --size: 38px;
+                    width: var(--size);
+                    height: var(--size);
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include mmd {
+                        flex: 0 0 auto;
+                    }
+                }
+                & .text {
+                    & span {
+                        @include font-24;
+                    }
+                }
+            }
+            & .btn {
+                font-size: 16px;
+                color: $heading;
+                @include mmd {
+                    width: calc(50% - 8px);
+                }
+            }
+        }
+        &-header {
+            margin-bottom: 30px;
+        }
+        & .btn {
+            --bs-btn-font-size: 16px;
+        }
+        &-wrap {
+            width: calc(100% - 31.93%);
+            padding: 16px;
+            background-color: $white;
+            border-radius: 12px;
+            border: 1px solid $border;
+            @include mmd {
+                width: 100%;
+            }
+            & .graph {
+                & img {
+                    max-width: none;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &-profit {
+        gap: var(--gap16);
+        &-cards {
+            gap: var(--gap16);
+            @include lg {
+                justify-content: center;
+            }
+        }
+        &-card {
+            border-radius: 12px;
+            box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+            padding: var(--gap16);
+            max-width: 263px;
+            // max-width: calc(265px - var(--gap16));
+            @include xxxl {
+                max-width: 19.17%;
+            }
+            @include xl {
+                max-width: 32.2%;
+            }
+            @include lg {
+                max-width: calc(50% - var(--gap16));
+            }
+            @include md {
+                max-width: 220px;
+            }
+            @include sm {
+                max-width: 100%;
+            }
+            & .subTitle {
+                padding: 2px 8px !important;
+                border-radius: 8px;
+                background: $bgGray;
+                margin-bottom: 2px;
+            }
+            & h4 {
+                color: $heading2;
+                @include mmd {
+                    margin-bottom: 8px;
+                }
+            }
+            & .card-btn {
+                display: flex;
+                gap: 10px;
+                & .btn {
+                    width: 100%;
+                }
+                & #menu {
+                    --size: 38px;
+                    width: var(--size);
+                    height: var(--size);
+                    border-radius: 8px;
+                    border: 1px solid $border;
+                    // background: $white;
+                    flex: 0 0 auto;
+                    @include transition;
+                    &:hover {
+                        background-color: $primary !important;
+                    }
+                }
+            }
+        }
+    }
+}

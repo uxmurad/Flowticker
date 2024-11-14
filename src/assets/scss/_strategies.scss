@@ -1,0 +1,649 @@
+.strategies {
+  &-header {
+    position: relative;
+    @include mmd {
+      margin-bottom: 72px;
+    }
+  }
+  & .form-control {
+    @include ssm {
+      width: 90%;
+    }
+  }
+  &-btn {
+    gap: 24px;
+    & .view-btn {
+      gap: 4px;
+      margin-right: 4px;
+      & button {
+        --size: 36px;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 8px;
+        border: 1px solid $border;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include transition;
+        padding: 0;
+        background: transparent;
+        & svg {
+          color: #727277;
+        }
+        &:hover,
+        &.active {
+          background-color: $secondary;
+          & svg {
+            color: $white;
+          }
+        }
+      }
+    }
+    & .btn-wrap {
+      display: flex;
+      gap: 24px;
+      @include mmd {
+        position: absolute;
+        left: 50%;
+        bottom: -56px;
+        transform: translate(-50%, 0);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      @include sm {
+        gap: 16px;
+      }
+    }
+    & .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      --bs-btn-padding-y: 10px;
+      @include mmd {
+        width: calc(50% - 48px);
+      }
+      @include sm {
+        width: 50%;
+        padding: var(--bs-btn-padding-y) 0;
+      }
+      & svg {
+        @include transition;
+      }
+    }
+    & #primaryIcon {
+      & svg {
+        color: $primary;
+      }
+      &:hover {
+        & svg {
+          color: $black !important;
+        }
+      }
+    }
+  }
+  & .profile-profit-card {
+    max-width: 358px;
+    @include xxxl {
+      max-width: 24.23%;
+    }
+    @include xxl {
+      max-width: 32.3%;
+    }
+    @include xl {
+      max-width: 32.18%;
+    }
+    @include lg {
+      max-width: 312px;
+    }
+    @include mmd {
+      width: 100%;
+      max-width: 100%;
+    }
+    & p {
+      margin-bottom: 12px;
+    }
+    & .read {
+      color: $secondary;
+    }
+    & .create {
+      gap: 8px;
+      margin-bottom: 16px;
+      & span {
+        border-radius: 8px;
+        padding: 2px 8px;
+        &:first-child {
+          background: rgba(77, 213, 184, 0.2);
+        }
+        &:nth-child(2) {
+          color: #ffba00;
+          background: rgba(255, 200, 51, 0.1);
+        }
+        @include xl {
+          padding: 2px 4px;
+        }
+      }
+    }
+  }
+  & .grid-view {
+    & > div {
+      &:not(:last-child) {
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid $border;
+      }
+    }
+  }
+  & .list-view {
+    & > div {
+      border-radius: 12px;
+      border: 1px solid $border;
+    }
+    & .lists {
+      &-list {
+        box-shadow: 0 0 0;
+        border-radius: 0;
+        max-width: none;
+        padding: 14px 0;
+        & #menu {
+          --size: 30px;
+          width: var(--size);
+          height: var(--size);
+          border-radius: 100%;
+          border: 1px solid $border;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include transition;
+          &:hover {
+            background-color: $black !important;
+            & .menu-box {
+              display: block;
+            }
+            & svg {
+              color: $white;
+            }
+          }
+          & .menu {
+            &-box {
+              width: 122px;
+              border-radius: 8px;
+              box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
+              padding: 0 20px;
+              top: 30px;
+              display: none;
+              position: absolute;
+            }
+            &-item {
+              padding: 16px 0;
+              display: block;
+              &:not(:last-child) {
+                border-bottom: 1px solid $border;
+              }
+              &:hover {
+                color: $primary !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    & .table {
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 0px;
+      }
+      & > :not(caption .subTitle) > * > * {
+        padding: unset;
+        padding-bottom: unset;
+      }
+      & .tr {
+        border-bottom: 1px solid #eaeaea;
+        @include lg {
+          width: fit-content !important;
+        }
+        @include mmd {
+          width: fit-content !important;
+        }
+        &:first-child {
+          background: $bgGray;
+        }
+      }
+      & .th {
+        padding: 14px 8px;
+        & svg {
+          padding: 0 !important;
+          color: $text;
+          background: $bgGray;
+        }
+      }
+      & .td {
+        padding-left: 8px;
+      }
+      & .td,
+      .th {
+        background-color: transparent;
+        text-align: left;
+        border: none;
+        @include lg {
+          flex: 0 0 auto;
+        }
+        &:first-child {
+          width: 27.23%;
+          @include xl {
+            width: 26.23%;
+          }
+          @include lg {
+            width: 293px;
+          }
+          @include mmd {
+            width: 293px;
+          }
+        }
+        &:nth-child(2) {
+          width: 27.23%;
+          @include lg {
+            width: 325px;
+          }
+          @include mmd {
+            width: 293px;
+          }
+        }
+        &:nth-child(3) {
+          width: 11.05%;
+          @include xl {
+            width: 13.05%;
+          }
+          @include lg {
+            width: 119px;
+          }
+          @include mmd {
+            width: 119px;
+          }
+        }
+        &:nth-child(4) {
+          width: 11.05%;
+          @include xl {
+            width: 13.05%;
+          }
+          @include lg {
+            width: 119px;
+          }
+          @include mmd {
+            width: 119px;
+          }
+        }
+        &:nth-child(5) {
+          width: 17.56%;
+          @include xl {
+            width: 13%;
+          }
+          @include lg {
+            width: 119px;
+          }
+          @include mmd {
+            width: 119px;
+          }
+        }
+        &:nth-child(6) {
+          width: 5.76%;
+          @include xxl {
+          }
+          @include lg {
+            width: 119px;
+          }
+          @include mmd {
+            width: 119px;
+          }
+        }
+      }
+    }
+  }
+  &-detail {
+    border-radius: 16px;
+    .strategies-modal & {
+      border-radius: 0;
+      padding: 0 !important;
+    }
+    &-header {
+      & .icon {
+        --size: 40px;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 37px;
+        background: $bgGray;
+        padding: 0;
+      }
+      & .text {
+        & h4 {
+          font-size: 18px;
+        }
+        & p {
+          & a {
+            color: $secondary;
+          }
+        }
+      }
+    }
+    & .button {
+      gap: 10px;
+      padding: 18px 0;
+      & span {
+        padding: 2px 8px;
+        background: $bgGray;
+        border-radius: 8px;
+        &:last-child {
+          background-color: #ffc833;
+        }
+      }
+    }
+    & .btn {
+      --bs-btn-padding-x: 54px;
+      --bs-btn-padding-y: 10px;
+      @include sm {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.detail-item {
+  &-single {
+    border-radius: 8px;
+    background: $bgGray;
+    width: 32.99%;
+    @include xxl {
+      width: 32.83%;
+    }
+    @include xl {
+      width: 32.75%;
+    }
+    @include lg {
+      width: 32.4%;
+    }
+    @include mmd {
+      width: calc(50% - 4px);
+    }
+    @include sm {
+      width: calc(50% - 8px);
+    }
+    .strategies-modal & {
+      width: calc(50% - 8px);
+    }
+    & .icon {
+      --size: 43px;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 8px;
+    }
+  }
+}
+
+.btn-view {
+  background-color: transparent !important;
+  height: 38px !important;
+  padding: 0px !important;
+  border-radius: 5px !important;
+}
+.btn-view.active-view-btn {
+  background-color: #4dd5b8 !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+.dropdown-wrapper {
+  position: relative;
+}
+
+.list-dropdown {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid #4dd5b8;
+  border-bottom-left-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+}
+
+.list-dropdown li {
+  font-size: 14px;
+  font-weight: 500;
+  color: #727276 !important;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+.list-dropdown li:hover {
+  background: #ededed;
+}
+
+// RunStrategy
+
+.RunStrategy {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 30px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+
+.RunStrategy .main-area-run {
+  height: 100%;
+  width: 419px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.RunStrategy .main-area-run form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.RunStrategy .main-area-run .title-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.RunStrategy .main-area-run .title-area img {
+  cursor: pointer;
+}
+.RunStrategy .main-area-run .title-area h1 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  margin-bottom: 0px !important;
+  color: #151b22;
+}
+
+.main-area-run .input-wrapper label {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  text-align: left;
+  color: #151b22;
+  margin-bottom: 10px;
+}
+
+.main-area-run .input-cover {
+  height: 40px;
+  width: 100%;
+  border-radius: 8px;
+  background: #f8f8f8;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+.main-area-run .input-cover select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #8e8f95;
+}
+.main-area-run .input-cover input {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  font-weight: 400;
+  color: #8e8f95;
+}
+
+.main-area-run .result-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.main-area-run .result-btns button {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  text-align: left;
+  color: #151b22;
+  background: transparent !important;
+  border: none;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.main-area-run .result-btns button.active {
+  border-bottom: 1px solid #4dd5b8;
+}
+
+.main-area-run .detail-run {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.main-area-run .detail-run a {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  text-decoration: underline !important;
+  color: #ff823c;
+}
+.main-area-run .react-datepicker__header {
+  background: transparent;
+  border-bottom: 0px;
+}
+.main-area-run .react-datepicker__day-names {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.main-area-run h2.react-datepicker__current-month {
+  color: #747474;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  text-align: center;
+}
+.main-area-run .react-datepicker__navigation {
+  top: 18px;
+}
+.main-area-run .react-datepicker__navigation--previous {
+  left: 15px;
+}
+.main-area-run .react-datepicker__navigation--next {
+  right: 15px;
+}
+.main-area-run .react-datepicker__day-names > div {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: #747474;
+  text-transform: uppercase;
+}
+.main-area-run .react-datepicker {
+  border: none;
+  background: #f8f8f8;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.main-area-run .react-datepicker,
+.main-area-run .react-datepicker > div {
+  width: 100%;
+}
+.main-area-run .full-width-datepicker {
+  width: 100%;
+}
+
+.main-area-run .react-datepicker__month {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+.main-area-run .react-datepicker__week {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--in-selecting-range,
+.react-datepicker__year-text--in-range {
+  background: #4dd5b8 !important;
+  border-radius: 99px !important;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker__time-name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  color: #747474;
+}
+
+.buttons-wrapper-star {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 1;
+  gap: 14px;
+}
+.buttons-wrapper-star > :not(.active) {
+  background-color: transparent !important;
+}
+.buttons-wrapper-star .active {
+  background-color: #4dd5b8;
+  color: #151b22;
+  border-radius: 5px;
+  border-color: transparent !important;
+}

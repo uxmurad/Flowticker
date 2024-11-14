@@ -1,0 +1,124 @@
+.marketplace {
+    &-header {
+        .input-item {
+            width: 255px;
+            flex: 0 0 auto;
+            @include sm {
+                width: 100%;
+            }
+            .form-control {
+                padding-left: 40px;
+            }
+            .filter {
+                border-radius: 8px;
+                --width: 30px;
+                width: var(--width);
+                height: var(--width);
+                flex: 0 0 auto;
+            }
+        }
+    }
+    &-items {
+        &-row {
+            --bs-gutter-x: 16px;
+        }
+        &-cards {
+            &-card {
+                padding: 16px;
+                border-radius: 12px;
+                background: $white;
+                box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+                height: 100%;
+                width: 100%;
+                .title {
+                    color: $heading2;
+                }
+                .des {
+                    color: $text;
+                    width: 70%;
+                    @include lg {
+                        width: 100%;
+                    }
+                    @include mmd {
+                        width: 100%;
+                    }
+                    span {
+                        color: $secondary;
+                        font-weight: 600;
+                    }
+                }
+                .card-history {
+                    .month {
+                        color: $heading2;
+                        border-radius: 8px;
+                        background: rgba(77, 213, 184, 0.20);
+                        padding: 2px 8px;
+                        @include sm {
+                            font-size: 12px !important;
+                        }
+                    }
+                    .live {
+                        color: #FFBA00;
+                        border-radius: 8px;
+                        background: rgba(255, 200, 51, 0.10);
+                        padding: 2px 8px;
+                        @include sm {
+                            font-size: 12px !important;
+                        }
+                    }
+                }
+                .all-valur-history {
+                    .total-value {
+                        border-radius: 8px;
+                        background: $bgGray;
+                        .image-area {
+                            border-radius: 8px;
+                            background: $white;
+                            padding: 11px;
+                            img {
+                                --width: 21px;
+                                width: var(--width);
+                                height: var(--width);
+                                flex: 0 0 auto;
+                            }
+                        }
+                        .values {
+                            .price {
+                                color: $heading2;
+                            }
+                            p {
+                                color: $text;
+                            }
+                        }
+                    }
+                }
+                .btns {
+                    gap: 10px;
+                    --f-width: 38px;
+                    .btn {
+                        width: calc(100% - var(--f-width) - 10px);
+                    }
+                    .wish {
+                        width: var(--f-width);
+                        height: var(--f-width);
+                        border-radius: 8px;
+                        background-color: $white;
+                        color: $secondary;
+                        &:hover,
+                        &.active {
+                            background-color: $secondary;
+                            border-color: $secondary;
+                            color: $white;
+                        }
+                        & svg {
+                            --width: 18px;
+                            height: var(--width);
+                            width: var(--width);
+                            flex: 0 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

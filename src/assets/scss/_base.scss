@@ -1,0 +1,129 @@
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: $text;
+    font-family: $font-1;
+    background-color: $bg;
+    overflow-y: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $heading;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    @include transition;
+}
+
+input,
+textarea,
+button {
+    padding: 10px 25px;
+    border: 1px solid $border;
+    outline: none;
+    @include transition;
+    &:focus {
+        outline: none;
+        border-color: $primary;
+    }
+}
+
+
+/*Hide number spin button*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.btn {
+    --bs-btn-padding-x: 20px;
+    --bs-btn-padding-y: 9px;
+    --bs-btn-color: #151B22;
+    --bs-btn-border-width: 1px;
+    --bs-btn-border-color: #4DD5B8;
+    --bs-btn-font-size: 14px;
+    --bs-btn-border-radius: 8px;
+    --bs-btn-font-weight: 500;
+    gap: 10px;
+    cursor: pointer;
+    &:hover {
+        background-color: $primary !important;
+        border-color: $primary !important;
+        color: $heading !important;
+    }
+    &.bg-primary {
+        border-color: $primary !important;
+        color: $heading !important;
+        &:hover {
+            background-color: transparent !important;
+            color: $primary !important;
+        }
+    }
+    &.bg-transparent {
+        border-color: $primary !important;
+        color: $heading !important;
+        &:hover {
+            background-color: $primary !important;
+        }
+    }
+}
+
+span {
+    display: inline-block;
+}
+
+#root {
+    overflow: hidden;
+}
+
+.form {
+    &-control {
+        font-size: 14px;
+        line-height: calc(24px/14px);
+        padding: var(--bs-input-y, 7px) var(--bs-input-x, 16px);
+        background-color: $bgGray;
+    }
+    &-file {
+        border: 1px dashed $secondary;
+        background-color: rgba($color: $secondary, $alpha: .04);
+        border-radius: 12px;
+        min-height: 185px;
+        overflow: hidden;
+        @include sm {
+            min-height: 145px;
+        }
+        &-img {
+            max-height: 100%;
+        }
+    }
+}

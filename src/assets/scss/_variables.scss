@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+// 
+$font-1: "Outfit",
+sans-serif;
+$white:#fff;
+$black:#000;
+$primary: #4DD5B8;
+$secondary: #FF823C;
+$text:#8E8F95;
+$heading: #161A23;
+$border:#EAEAEA;
+$bg:$white;
+$bgGray:#F8F8F8;
+$heading2:#151B22;
+$card-bg:#2C3137;
+$green:#19C725;
+:root {
+    scroll-behavior: auto !important;
+    --bs-border-color: #EAEAEA;
+}
